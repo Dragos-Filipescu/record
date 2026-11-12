@@ -1,0 +1,77 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Three\+Way\+Comparison Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison@{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_aef81d76f9894903adfe3df4c22748451}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe three way comparable types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_af32121ca0a47e9f10cd677aa2d9c5de5}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow three way comparable types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_aef81d76f9894903adfe3df4c22748451}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_aef81d76f9894903adfe3df4c22748451}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison@{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison@{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Three\+Way\+Comparison\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    ThreeWayComparable,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe three way comparable types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::three\+\_\+way\+\_\+comparable$<$\+T$>$} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item An ADL helper friend for three way comparison ({\ttfamily compare}), participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_af32121ca0a47e9f10cd677aa2d9c5de5}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison_af32121ca0a47e9f10cd677aa2d9c5de5}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison@{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison@{record::field::detail::traits::FieldTraits$<$ Fields $>$::ThreeWayComparison}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Three\+Way\+Comparison\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    NoThrowThreeWayComparable,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow three way comparable types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily noexcept(std\+::declval$<$const T\&$>$() $<$=$>$ std\+::declval$<$const T\&$>$())} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specifications of the three way comparison helper ({\ttfamily compare}) is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

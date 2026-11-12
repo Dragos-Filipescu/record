@@ -1,0 +1,118 @@
+\hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail}{}\doxysection{record\+::field\+::concepts\+::detail Namespace Reference}
+\label{namespacerecord_1_1field_1_1concepts_1_1detail}\index{record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a239e6d997bab80e6d9e5e01c0c909d60}{Valid\+Stored\+Type}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}{Storable}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_adf209f084a9342967565ce15b61f6ad2}{Has\+Alignment}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a2c6f296ea17990a95974dac4d4fd95c5}{Has\+Equals}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a4ed0aee6012f97102b770d92c61eeb29}{Is\+Common\+Comparison\+Category}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a03a58960410f3977647b922c4b488aea}{Has\+Three\+Way\+Compare}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_adf209f084a9342967565ce15b61f6ad2}\label{namespacerecord_1_1field_1_1concepts_1_1detail_adf209f084a9342967565ce15b61f6ad2}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!HasAlignment@{HasAlignment}}
+\index{HasAlignment@{HasAlignment}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{HasAlignment}{HasAlignment}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Has\+Alignment}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} \{}
+\DoxyCodeLine{                \{ T::alignment \} -\/> std::convertible\_to<std::size\_t>;}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_a2c6f296ea17990a95974dac4d4fd95c5}\label{namespacerecord_1_1field_1_1concepts_1_1detail_a2c6f296ea17990a95974dac4d4fd95c5}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!HasEquals@{HasEquals}}
+\index{HasEquals@{HasEquals}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{HasEquals}{HasEquals}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Has\+Equals}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}}(\textcolor{keyword}{const} T\& t1, \textcolor{keyword}{const} T\& t2) \{}
+\DoxyCodeLine{                \textcolor{keyword}{typename} T::equals;}
+\DoxyCodeLine{                \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} std::invocable<typename T::equals, const T\&, const T\&>;}
+\DoxyCodeLine{                \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} std::convertible\_to<}
+\DoxyCodeLine{                    std::invoke\_result\_t<typename T::equals, const T\&, const T\&>,}
+\DoxyCodeLine{                    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{                >;}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_a03a58960410f3977647b922c4b488aea}\label{namespacerecord_1_1field_1_1concepts_1_1detail_a03a58960410f3977647b922c4b488aea}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!HasThreeWayCompare@{HasThreeWayCompare}}
+\index{HasThreeWayCompare@{HasThreeWayCompare}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{HasThreeWayCompare}{HasThreeWayCompare}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Has\+Three\+Way\+Compare}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}}(\textcolor{keyword}{const} T\& t1, \textcolor{keyword}{const} T\& t2) \{}
+\DoxyCodeLine{                \textcolor{keyword}{typename} T::compare\_three\_way;}
+\DoxyCodeLine{                \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} std::invocable<typename T::compare\_three\_way, const T\&, const T\&>;}
+\DoxyCodeLine{                \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a4ed0aee6012f97102b770d92c61eeb29}{IsCommonComparisonCategory}}<}
+\DoxyCodeLine{                    std::invoke\_result\_t<typename T::compare\_three\_way, const T\&, const T\&>}
+\DoxyCodeLine{                >;}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_a4ed0aee6012f97102b770d92c61eeb29}\label{namespacerecord_1_1field_1_1concepts_1_1detail_a4ed0aee6012f97102b770d92c61eeb29}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!IsCommonComparisonCategory@{IsCommonComparisonCategory}}
+\index{IsCommonComparisonCategory@{IsCommonComparisonCategory}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{IsCommonComparisonCategory}{IsCommonComparisonCategory}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Is\+Common\+Comparison\+Category}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (}
+\DoxyCodeLine{                std::same\_as<T, std::partial\_ordering>}
+\DoxyCodeLine{                || std::same\_as<T, std::weak\_ordering>}
+\DoxyCodeLine{                || std::same\_as<T, std::strong\_ordering>}
+\DoxyCodeLine{            )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}\label{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!Storable@{Storable}}
+\index{Storable@{Storable}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{Storable}{Storable}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Storable}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} \{}
+\DoxyCodeLine{                \textcolor{keyword}{typename} T::stored\_type;}
+\DoxyCodeLine{                \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{requires}} ValidStoredType<typename T::stored\_type>;}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_1_1detail_a239e6d997bab80e6d9e5e01c0c909d60}\label{namespacerecord_1_1field_1_1concepts_1_1detail_a239e6d997bab80e6d9e5e01c0c909d60}} 
+\index{record::field::concepts::detail@{record::field::concepts::detail}!ValidStoredType@{ValidStoredType}}
+\index{ValidStoredType@{ValidStoredType}!record::field::concepts::detail@{record::field::concepts::detail}}
+\doxysubsubsection{\texorpdfstring{ValidStoredType}{ValidStoredType}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::detail\+::\+Valid\+Stored\+Type}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (}
+\DoxyCodeLine{                std::is\_object\_v<T>}
+\DoxyCodeLine{                \&\& !std::is\_abstract\_v<T>}
+\DoxyCodeLine{                \&\& std::destructible<T>}
+\DoxyCodeLine{            )}
+
+\end{DoxyCode}

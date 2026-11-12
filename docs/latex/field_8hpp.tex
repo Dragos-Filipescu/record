@@ -1,0 +1,87 @@
+\hypertarget{field_8hpp}{}\doxysection{include/record/field.hpp File Reference}
+\label{field_8hpp}\index{include/record/field.hpp@{include/record/field.hpp}}
+{\ttfamily \#include $<$compare$>$}\newline
+{\ttfamily \#include $<$concepts$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$record/detail/utils.\+hpp$>$}\newline
+Include dependency graph for field.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{record\+::field\+::\+Record\+Field$<$ Stored\+T $>$}}
+\begin{DoxyCompactList}\small\item\em Helper base class for declaring a Field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$}}
+\begin{DoxyCompactList}\small\item\em Type traits for a collection of {\ttfamily Field}s. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Default\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Copy\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyAssignment}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Copy\+Assignment}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Move\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveAssignment}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Move\+Assignment}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Destruction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Equality}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}{record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$\+::\+Three\+Way\+Comparison}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout$<$ Fields $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord}{record}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field}{record\+::field}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts}{record\+::field\+::concepts}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail}{record\+::field\+::concepts\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1detail}{record\+::field\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1detail_1_1traits}{record\+::field\+::detail\+::traits}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1detail_1_1layout}{record\+::field\+::detail\+::layout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{field_8hpp_a3532bb49b25be90ea1f13e40c5837cdf}{RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+FIELD\+\_\+\+HPP}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a239e6d997bab80e6d9e5e01c0c909d60}{record\+::field\+::concepts\+::detail\+::\+Valid\+Stored\+Type}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}{record\+::field\+::concepts\+::detail\+::\+Storable}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_adf209f084a9342967565ce15b61f6ad2}{record\+::field\+::concepts\+::detail\+::\+Has\+Alignment}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a2c6f296ea17990a95974dac4d4fd95c5}{record\+::field\+::concepts\+::detail\+::\+Has\+Equals}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a4ed0aee6012f97102b770d92c61eeb29}{record\+::field\+::concepts\+::detail\+::\+Is\+Common\+Comparison\+Category}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a03a58960410f3977647b922c4b488aea}{record\+::field\+::concepts\+::detail\+::\+Has\+Three\+Way\+Compare}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_a7ec169f09ebbd1fdf180dd72f2cdd240}{record\+::field\+::concepts\+::\+Field}} = detail\+::\+Storable$<$T$>$
+\begin{DoxyCompactList}\small\item\em Models a field descriptor with semantic operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{field_8hpp_a3532bb49b25be90ea1f13e40c5837cdf}\label{field_8hpp_a3532bb49b25be90ea1f13e40c5837cdf}} 
+\index{field.hpp@{field.hpp}!RECORD\_INCLUDE\_RECORD\_FIELD\_HPP@{RECORD\_INCLUDE\_RECORD\_FIELD\_HPP}}
+\index{RECORD\_INCLUDE\_RECORD\_FIELD\_HPP@{RECORD\_INCLUDE\_RECORD\_FIELD\_HPP}!field.hpp@{field.hpp}}
+\doxysubsubsection{\texorpdfstring{RECORD\_INCLUDE\_RECORD\_FIELD\_HPP}{RECORD\_INCLUDE\_RECORD\_FIELD\_HPP}}
+{\footnotesize\ttfamily \#define RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+FIELD\+\_\+\+HPP}
+

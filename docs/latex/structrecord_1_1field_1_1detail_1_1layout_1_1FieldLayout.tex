@@ -1,0 +1,152 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{}\doxysection{record\+::field\+::detail\+::layout\+::Field\+Layout$<$ Fields $>$ Struct Template Reference}
+\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ace6add63f3f9eaf1e5d7c3f27905e3c6}{align\+Up}} (std\+::size\+\_\+t value, std\+::size\+\_\+t alignment)
+\item 
+{\footnotesize template$<$concepts\+::\+Field F$>$ }\\static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a6899262274605e8bbc146b73354ed267}{get\+Alignment}} ()
+\item 
+static consteval auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aa762b747ace6efc3fedbbaf74a77a563}{get\+Layout\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}} = \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aa762b747ace6efc3fedbbaf74a77a563}{get\+Layout\+Info}}()
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}{k\+Field\+Count}} = sizeof...(Fields)
+\item 
+static constexpr std\+::array$<$ std\+::size\+\_\+t, \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}{k\+Field\+Count}} $>$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a0766f6edaef35a967c2b0d2e85815d31}{k\+Offsets}} = std\+::get$<$0$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})
+\begin{DoxyCompactList}\small\item\em Byte offsets of each field\textquotesingle{}s stored value within the underlying buffer, indexed by declaration order. \end{DoxyCompactList}\item 
+static constexpr std\+::array$<$ std\+::size\+\_\+t, \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}{k\+Field\+Count}} $>$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_af2d3f23f28ad941b276e3feb1777c91c}{k\+Storage\+Order}} = std\+::get$<$1$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})
+\begin{DoxyCompactList}\small\item\em The permutation mapping storage positions to declaration indices, indexed by storage position. \end{DoxyCompactList}\item 
+static constexpr auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a30963f414e9b9d3ca49ee0dc8565c7b4}{k\+Reversed\+Storage\+Order}}
+\begin{DoxyCompactList}\small\item\em The same permutation as {\ttfamily k\+Storage\+Order}, but the order of indices is reversed. \end{DoxyCompactList}\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a69ae088f2cc37a2f07080725cf73d60c}{k\+Packed\+Size}} = std\+::get$<$2$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})
+\begin{DoxyCompactList}\small\item\em The packed size of this Field set, in bytes. \end{DoxyCompactList}\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ad707d6460461ae68c111f8dc1894bd32}{k\+Aligned\+Size}} = std\+::get$<$3$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})
+\begin{DoxyCompactList}\small\item\em The aligned size of this Field set, in bytes, including tail padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ace6add63f3f9eaf1e5d7c3f27905e3c6}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ace6add63f3f9eaf1e5d7c3f27905e3c6}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!alignUp@{alignUp}}
+\index{alignUp@{alignUp}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{alignUp()}{alignUp()}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::align\+Up (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{value,  }\item[{std\+::size\+\_\+t}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a6899262274605e8bbc146b73354ed267}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a6899262274605e8bbc146b73354ed267}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!getAlignment@{getAlignment}}
+\index{getAlignment@{getAlignment}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{getAlignment()}{getAlignment()}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+template$<$concepts\+::\+Field F$>$ \\
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::get\+Alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aa762b747ace6efc3fedbbaf74a77a563}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aa762b747ace6efc3fedbbaf74a77a563}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!getLayoutInfo@{getLayoutInfo}}
+\index{getLayoutInfo@{getLayoutInfo}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{getLayoutInfo()}{getLayoutInfo()}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+static consteval auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::get\+Layout\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ad707d6460461ae68c111f8dc1894bd32}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_ad707d6460461ae68c111f8dc1894bd32}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kAlignedSize@{kAlignedSize}}
+\index{kAlignedSize@{kAlignedSize}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kAlignedSize}{kAlignedSize}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Aligned\+Size = std\+::get$<$3$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The aligned size of this Field set, in bytes, including tail padding. 
+
+That is, the sum of all {\ttfamily sizeof(\+T)}, where {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type} and {\ttfamily F} is each of the {\ttfamily Fields...}, including internal padding between {\ttfamily Ts}, as well as tail padding.
+
+This is the size that should be used when embedding Records in arrays or other contiguous structures. \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kFieldCount@{kFieldCount}}
+\index{kFieldCount@{kFieldCount}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kFieldCount}{kFieldCount}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Field\+Count = sizeof...(Fields)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kLayoutInfo@{kLayoutInfo}}
+\index{kLayoutInfo@{kLayoutInfo}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kLayoutInfo}{kLayoutInfo}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Layout\+Info = \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aa762b747ace6efc3fedbbaf74a77a563}{get\+Layout\+Info}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a0766f6edaef35a967c2b0d2e85815d31}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a0766f6edaef35a967c2b0d2e85815d31}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kOffsets@{kOffsets}}
+\index{kOffsets@{kOffsets}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kOffsets}{kOffsets}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr std\+::array$<$std\+::size\+\_\+t, \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}{k\+Field\+Count}}$>$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Offsets = std\+::get$<$0$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Byte offsets of each field\textquotesingle{}s stored value within the underlying buffer, indexed by declaration order. 
+
+That is, {\ttfamily k\+Offsets\mbox{[}I\mbox{]}} is the byte offset of the {\ttfamily I}-\/th field in {\ttfamily Fields...}. Note that fields are reordered internally to minimise padding, so offsets are not necessarily monotonically increasing. \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a69ae088f2cc37a2f07080725cf73d60c}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a69ae088f2cc37a2f07080725cf73d60c}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kPackedSize@{kPackedSize}}
+\index{kPackedSize@{kPackedSize}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kPackedSize}{kPackedSize}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Packed\+Size = std\+::get$<$2$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The packed size of this Field set, in bytes. 
+
+That is, the sum of all {\ttfamily sizeof(\+T)}, where {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type} and {\ttfamily F} is each of the {\ttfamily Fields...}, including internal padding between {\ttfamily Ts}, but excluding tail padding.
+
+This is the size that should be used when tail padding is irrelevant, such as writing to a network buffer. \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a30963f414e9b9d3ca49ee0dc8565c7b4}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a30963f414e9b9d3ca49ee0dc8565c7b4}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kReversedStorageOrder@{kReversedStorageOrder}}
+\index{kReversedStorageOrder@{kReversedStorageOrder}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kReversedStorageOrder}{kReversedStorageOrder}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr auto \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Reversed\+Storage\+Order\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [] \{}
+\DoxyCodeLine{                std::array<std::size\_t, kFieldCount> arr\{\};}
+\DoxyCodeLine{                std::copy(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_af2d3f23f28ad941b276e3feb1777c91c}{kStorageOrder}}.rbegin(), \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_af2d3f23f28ad941b276e3feb1777c91c}{kStorageOrder}}.rend(), arr.begin());}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} arr;}
+\DoxyCodeLine{            \}()}
+
+\end{DoxyCode}
+
+
+The same permutation as {\ttfamily k\+Storage\+Order}, but the order of indices is reversed. 
+
+That is, {\ttfamily k\+Reversed\+Storage\+Order\mbox{[}I\mbox{]}} is the declaration index of the field occupying the {\ttfamily (N -\/ 1 -\/ I)}-\/th position in storage.
+
+\begin{DoxyNote}{Note}
+This is strictly different from attempting to use {\ttfamily k\+Storage\+Order\mbox{[}N -\/ 1 -\/ I\mbox{]}}, as the indices inside it are not guaranteed to be monotonically increasing. 
+\end{DoxyNote}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_af2d3f23f28ad941b276e3feb1777c91c}\label{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_af2d3f23f28ad941b276e3feb1777c91c}} 
+\index{record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}!kStorageOrder@{kStorageOrder}}
+\index{kStorageOrder@{kStorageOrder}!record::field::detail::layout::FieldLayout$<$ Fields $>$@{record::field::detail::layout::FieldLayout$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kStorageOrder}{kStorageOrder}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr std\+::array$<$std\+::size\+\_\+t, \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_aaae4f6c9ddeec4f336114624eae518ee}{k\+Field\+Count}}$>$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout}{record\+::field\+::detail\+::layout\+::\+Field\+Layout}}$<$ Fields $>$\+::k\+Storage\+Order = std\+::get$<$1$>$(\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1layout_1_1FieldLayout_a8cacb0445450440da6bde89d97960c16}{k\+Layout\+Info}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The permutation mapping storage positions to declaration indices, indexed by storage position. 
+
+That is, {\ttfamily k\+Storage\+Order\mbox{[}I\mbox{]}} is the declaration index of the field occupying the {\ttfamily I}-\/th position in storage. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

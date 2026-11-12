@@ -1,0 +1,109 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Copy\+Construction Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ad4ea3bf2ec97bc1a218ea8c56c5a2342}{k\+Trivial}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe trivially copy constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_af4ca8d52bea4e8c7a9d353d7d4d5ba41}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe copy constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ab7f27810731a68e9b357ab52c48d3918}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow copy constructible types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_af4ca8d52bea4e8c7a9d353d7d4d5ba41}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_af4ca8d52bea4e8c7a9d353d7d4d5ba41}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Copy\+Construction\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_copy\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe copy constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+copy\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The copy constructor participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ab7f27810731a68e9b357ab52c48d3918}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ab7f27810731a68e9b357ab52c48d3918}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Copy\+Construction\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_nothrow\_copy\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow copy constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specification of the copy constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ad4ea3bf2ec97bc1a218ea8c56c5a2342}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction_ad4ea3bf2ec97bc1a218ea8c56c5a2342}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}!kTrivial@{kTrivial}}
+\index{kTrivial@{kTrivial}!record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::CopyConstruction}}
+\doxysubsubsection{\texorpdfstring{kTrivial}{kTrivial}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Copy\+Construction\+::k\+Trivial\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_trivially\_copy\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe trivially copy constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The copy constructor participates in overload resolution, {\bfseries{and}}
+\item The copy constructor is trivial, {\bfseries{and}}
+\item The exception specification of the copy constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{}\doxysection{record\+::detail\+::contracts\+::Record\+Contracts$<$ Fields $>$ Class Template Reference}
+\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts}\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+
+
+{\ttfamily \#include $<$record.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a38724f9c96218ccaa6d5091706a30343}{Default\+Constructor}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}{Traits\+::\+Default\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record()\mbox{]} The default constructor is \char`\"{} \char`\"{}unavailable unless all Fields are default constructible\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a92097bc63398f1a2b9d3451c03211b48}{Copy\+Constructor}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}{Traits\+::\+Copy\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record(const \mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&)\mbox{]} The copy constructor is \char`\"{} \char`\"{}unavailable unless all Fields are copy constructible\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ad91847f925e34e9d33542d11467a2d65}{Copy\+Assignment}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyAssignment}{Traits\+::\+Copy\+Assignment}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::operator=(const \mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&)\mbox{]} The copy assignment operator is \char`\"{} \char`\"{}unavailable unless all Fields are copy assignable\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab21836c9e819ee7eca1dbf15f8ba8fba}{Move\+Constructor}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}{Traits\+::\+Move\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record(\mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&\&)\mbox{]} The move constructor is \char`\"{} \char`\"{}unavailable unless all Fields are move constructible\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a010a8f3df8a18bafa79c2dc7df1195be}{Move\+Assignment}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveAssignment}{Traits\+::\+Move\+Assignment}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::operator=(\mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&\&)\mbox{]} The move assignment operator is \char`\"{} \char`\"{}unavailable unless all Fields are move assignable\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab95b91e798d3c85f8776795219713147}{Destructor}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{Traits\+::\+Destruction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::$\sim$\+Record()\mbox{]} The destructor is \char`\"{} \char`\"{}unavailable unless all Fields are destructible\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a8de20082c37aa37693b190349c0c7ff3}{Equality}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{Traits\+::\+Equality}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::equals\mbox{]} The equals helper is \char`\"{} \char`\"{}unavailable unless all Fields are equality comparable\char`\"{} \} $>$
+\item 
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_afaf222960d0ab4bd7f9a0ec1de921d19}{Three\+Way\+Comparison}} = Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}{Traits\+::\+Three\+Way\+Comparison}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::compare\mbox{]} The compare helper is \char`\"{} \char`\"{}unavailable unless all Fields are three-\/way comparable\char`\"{} \} $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ad91847f925e34e9d33542d11467a2d65}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ad91847f925e34e9d33542d11467a2d65}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!CopyAssignment@{CopyAssignment}}
+\index{CopyAssignment@{CopyAssignment}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{CopyAssignment}{CopyAssignment}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ad91847f925e34e9d33542d11467a2d65}{Copy\+Assignment}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyAssignment}{Traits\+::\+Copy\+Assignment}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::operator=(const \mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&)\mbox{]} The copy assignment operator is \char`\"{} \char`\"{}unavailable unless all Fields are copy assignable\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a92097bc63398f1a2b9d3451c03211b48}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a92097bc63398f1a2b9d3451c03211b48}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!CopyConstructor@{CopyConstructor}}
+\index{CopyConstructor@{CopyConstructor}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{CopyConstructor}{CopyConstructor}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a92097bc63398f1a2b9d3451c03211b48}{Copy\+Constructor}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}{Traits\+::\+Copy\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record(const \mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&)\mbox{]} The copy constructor is \char`\"{} \char`\"{}unavailable unless all Fields are copy constructible\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a38724f9c96218ccaa6d5091706a30343}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a38724f9c96218ccaa6d5091706a30343}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!DefaultConstructor@{DefaultConstructor}}
+\index{DefaultConstructor@{DefaultConstructor}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{DefaultConstructor}{DefaultConstructor}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a38724f9c96218ccaa6d5091706a30343}{Default\+Constructor}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}{Traits\+::\+Default\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record()\mbox{]} The default constructor is \char`\"{} \char`\"{}unavailable unless all Fields are default constructible\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab95b91e798d3c85f8776795219713147}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab95b91e798d3c85f8776795219713147}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!Destructor@{Destructor}}
+\index{Destructor@{Destructor}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{Destructor}{Destructor}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab95b91e798d3c85f8776795219713147}{Destructor}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{Traits\+::\+Destruction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::$\sim$\+Record()\mbox{]} The destructor is \char`\"{} \char`\"{}unavailable unless all Fields are destructible\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a8de20082c37aa37693b190349c0c7ff3}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a8de20082c37aa37693b190349c0c7ff3}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!Equality@{Equality}}
+\index{Equality@{Equality}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{Equality}{Equality}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a8de20082c37aa37693b190349c0c7ff3}{Equality}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{Traits\+::\+Equality}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::equals\mbox{]} The equals helper is \char`\"{} \char`\"{}unavailable unless all Fields are equality comparable\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a010a8f3df8a18bafa79c2dc7df1195be}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a010a8f3df8a18bafa79c2dc7df1195be}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!MoveAssignment@{MoveAssignment}}
+\index{MoveAssignment@{MoveAssignment}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{MoveAssignment}{MoveAssignment}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_a010a8f3df8a18bafa79c2dc7df1195be}{Move\+Assignment}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveAssignment}{Traits\+::\+Move\+Assignment}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::operator=(\mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&\&)\mbox{]} The move assignment operator is \char`\"{} \char`\"{}unavailable unless all Fields are move assignable\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab21836c9e819ee7eca1dbf15f8ba8fba}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab21836c9e819ee7eca1dbf15f8ba8fba}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!MoveConstructor@{MoveConstructor}}
+\index{MoveConstructor@{MoveConstructor}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{MoveConstructor}{MoveConstructor}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_ab21836c9e819ee7eca1dbf15f8ba8fba}{Move\+Constructor}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}{Traits\+::\+Move\+Construction}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::\+Record\+::\+Record(\mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{Record}}\&\&)\mbox{]} The move constructor is \char`\"{} \char`\"{}unavailable unless all Fields are move constructible\char`\"{} \} $>$}
+
+\mbox{\Hypertarget{classrecord_1_1detail_1_1contracts_1_1RecordContracts_afaf222960d0ab4bd7f9a0ec1de921d19}\label{classrecord_1_1detail_1_1contracts_1_1RecordContracts_afaf222960d0ab4bd7f9a0ec1de921d19}} 
+\index{record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}!ThreeWayComparison@{ThreeWayComparison}}
+\index{ThreeWayComparison@{ThreeWayComparison}!record::detail::contracts::RecordContracts$<$ Fields $>$@{record::detail::contracts::RecordContracts$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{ThreeWayComparison}{ThreeWayComparison}}
+{\footnotesize\ttfamily template$<$Field... Fields$>$ \\
+using \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts}}$<$ Fields $>$\+::\mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts_afaf222960d0ab4bd7f9a0ec1de921d19}{Three\+Way\+Comparison}} =  Contract$<$ typename \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}{Traits\+::\+Three\+Way\+Comparison}}, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{utils\+::\+Fixed\+String}}\{ \char`\"{}\mbox{[}record\+::compare\mbox{]} The compare helper is \char`\"{} \char`\"{}unavailable unless all Fields are three-\/way comparable\char`\"{} \} $>$}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{record_8hpp}{record.\+hpp}}\end{DoxyCompactItemize}

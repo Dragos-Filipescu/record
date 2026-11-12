@@ -1,0 +1,44 @@
+\hypertarget{namespacerecord_1_1detail_1_1utils_1_1set}{}\doxysection{record\+::detail\+::utils\+::set Namespace Reference}
+\label{namespacerecord_1_1detail_1_1utils_1_1set}\index{record::detail::utils::set@{record::detail::utils::set}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1set_1_1Set}{Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename S1 , typename S2 $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_ad24b4b439de9c47457f26f15053d1563}{Set\+Equal}} = false
+\item 
+{\footnotesize template$<$typename... As, typename... Bs$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_aa4782453d18470d9ae36aaf9a9efa6a8}{Set\+Equal$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerecord_1_1detail_1_1utils_1_1set_ad24b4b439de9c47457f26f15053d1563}\label{namespacerecord_1_1detail_1_1utils_1_1set_ad24b4b439de9c47457f26f15053d1563}} 
+\index{record::detail::utils::set@{record::detail::utils::set}!SetEqual@{SetEqual}}
+\index{SetEqual@{SetEqual}!record::detail::utils::set@{record::detail::utils::set}}
+\doxysubsubsection{\texorpdfstring{SetEqual}{SetEqual}}
+{\footnotesize\ttfamily template$<$typename S1 , typename S2 $>$ \\
+constexpr bool record\+::detail\+::utils\+::set\+::\+Set\+Equal = false\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_1_1utils_1_1set_aa4782453d18470d9ae36aaf9a9efa6a8}\label{namespacerecord_1_1detail_1_1utils_1_1set_aa4782453d18470d9ae36aaf9a9efa6a8}} 
+\index{record::detail::utils::set@{record::detail::utils::set}!SetEqual$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$@{SetEqual$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}}
+\index{SetEqual$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$@{SetEqual$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}!record::detail::utils::set@{record::detail::utils::set}}
+\doxysubsubsection{\texorpdfstring{SetEqual$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}{SetEqual< Set< As... >, Set< Bs... > >}}
+{\footnotesize\ttfamily template$<$typename... As, typename... Bs$>$ \\
+constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_ad24b4b439de9c47457f26f15053d1563}{record\+::detail\+::utils\+::set\+::\+Set\+Equal}}$<$ \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1set_1_1Set}{Set}}$<$ As... $>$, \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1set_1_1Set}{Set}}$<$ Bs... $>$ $>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (}
+\DoxyCodeLine{            \textcolor{keyword}{sizeof}...(As) == \textcolor{keyword}{sizeof}...(Bs)}
+\DoxyCodeLine{            \&\& \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail_ab90585eb8a446026c92c504785831592}{detail::Subset}}<Set<As...>, Set<Bs...>>}
+\DoxyCodeLine{        )}
+
+\end{DoxyCode}

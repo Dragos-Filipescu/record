@@ -1,0 +1,77 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Equality Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a5667a6262ec3c6c1ff66c3a0031814fd}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe equality comparable types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a522b8980f5675482a9f3dbdca0034f0d}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow equality comparable types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a5667a6262ec3c6c1ff66c3a0031814fd}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a5667a6262ec3c6c1ff66c3a0031814fd}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Equality\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    EqComparable,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe equality comparable types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::equality\+\_\+comparable$<$\+T$>$} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item An ADL helper friend for equality comparison ({\ttfamily equals}), participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a522b8980f5675482a9f3dbdca0034f0d}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality_a522b8980f5675482a9f3dbdca0034f0d}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Equality}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Equality\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    NoThrowEqComparable,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow equality comparable types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily noexcept(std\+::declval$<$const T\&$>$() == std\+::declval$<$const T\&$>$())} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specifications of the equality comparison helper ({\ttfamily equals}) is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

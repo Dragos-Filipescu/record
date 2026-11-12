@@ -1,0 +1,109 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Destruction Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a24c21aea3cec8bccff61e5203325862e}{k\+Trivial}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe trivially destructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a4bb0f02d0df0c3a3ab8c78f3a630260d}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe destructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_aa7ee5d4dd7099316c1aa04261133e5e0}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow destructible types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a4bb0f02d0df0c3a3ab8c78f3a630260d}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a4bb0f02d0df0c3a3ab8c78f3a630260d}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Destruction\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_destructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe destructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+destructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The destructor participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_aa7ee5d4dd7099316c1aa04261133e5e0}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_aa7ee5d4dd7099316c1aa04261133e5e0}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Destruction\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_nothrow\_destructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow destructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+nothrow\+\_\+destructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specification of the destructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a24c21aea3cec8bccff61e5203325862e}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction_a24c21aea3cec8bccff61e5203325862e}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}!kTrivial@{kTrivial}}
+\index{kTrivial@{kTrivial}!record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::Destruction}}
+\doxysubsubsection{\texorpdfstring{kTrivial}{kTrivial}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Destruction\+::k\+Trivial\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_trivially\_destructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe trivially destructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+trivially\+\_\+destructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The destructor participates in overload resolution, {\bfseries{and}}
+\item The destructor is trivial, {\bfseries{and}}
+\item The exception specification of the destructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

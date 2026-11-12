@@ -1,0 +1,43 @@
+\hypertarget{namespacerecord_1_1field_1_1concepts}{}\doxysection{record\+::field\+::concepts Namespace Reference}
+\label{namespacerecord_1_1field_1_1concepts}\index{record::field::concepts@{record::field::concepts}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_a7ec169f09ebbd1fdf180dd72f2cdd240}{Field}} = \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}{detail\+::\+Storable}}$<$T$>$
+\begin{DoxyCompactList}\small\item\em Models a field descriptor with semantic operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerecord_1_1field_1_1concepts_a7ec169f09ebbd1fdf180dd72f2cdd240}\label{namespacerecord_1_1field_1_1concepts_a7ec169f09ebbd1fdf180dd72f2cdd240}} 
+\index{record::field::concepts@{record::field::concepts}!Field@{Field}}
+\index{Field@{Field}!record::field::concepts@{record::field::concepts}}
+\doxysubsubsection{\texorpdfstring{Field}{Field}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::field\+::concepts\+::\+Field = \mbox{\hyperlink{namespacerecord_1_1field_1_1concepts_1_1detail_a5cfe6fe882ab0168abf40add32ca6f17}{detail\+::\+Storable}}$<$T$>$}
+
+
+
+Models a field descriptor with semantic operations. 
+
+In order for a type {\ttfamily T} to satisfy the concept {\ttfamily Field}, it {\bfseries{must}} provide\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+::stored\+\_\+type}\+: A typedef of the underlying data type. It must be a non-\/abstract object type, with a non-\/throwing destructor.
+\end{DoxyItemize}
+
+The type {\ttfamily T} {\bfseries{may}} additionally provide\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+::alignment}\+: A static member of type {\ttfamily std\+::size\+\_\+t}. This enforces memory alignment for the field.
+\item {\ttfamily T\+::equals}\+: A functor for equality comparison, {\bfseries{and}}
+\item {\ttfamily T\+::compare\+\_\+three\+\_\+way}\+: A functor for three-\/way comparison.
+\end{DoxyItemize}
+
+It is intended for users to inherit {\ttfamily \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{Record\+Field}}}, which already provides defaults for all 4, and which may be overridden as desired. 

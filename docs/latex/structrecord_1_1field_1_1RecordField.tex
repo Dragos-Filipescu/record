@@ -1,0 +1,77 @@
+\hypertarget{structrecord_1_1field_1_1RecordField}{}\doxysection{record\+::field\+::Record\+Field$<$ StoredT $>$ Struct Template Reference}
+\label{structrecord_1_1field_1_1RecordField}\index{record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}}
+
+
+Helper base class for declaring a Field.  
+
+
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a11d0a98dbda549b9f759f0b3d8066fec}{stored\+\_\+type}} = StoredT
+\item 
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a0eaf41634b62e94afe03882622fb8388}{equals}} = std\+::equal\+\_\+to$<$ StoredT $>$
+\item 
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a4d6f1c137f3009058bc96b0bf13217dd}{compare\+\_\+three\+\_\+way}} = std\+::compare\+\_\+three\+\_\+way
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a1365343246ab250486604765043d401b}{alignment}} = alignof(StoredT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$concepts\+::detail\+::\+Valid\+Stored\+Type StoredT$>$\newline
+struct record\+::field\+::\+Record\+Field$<$ Stored\+T $>$}
+
+Helper base class for declaring a Field. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em StoredT} & The concrete type stored by the field. It must be a non-\/abstract object type, with a non-\/throwing destructor. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1RecordField_a4d6f1c137f3009058bc96b0bf13217dd}\label{structrecord_1_1field_1_1RecordField_a4d6f1c137f3009058bc96b0bf13217dd}} 
+\index{record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}!compare\_three\_way@{compare\_three\_way}}
+\index{compare\_three\_way@{compare\_three\_way}!record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}}
+\doxysubsubsection{\texorpdfstring{compare\_three\_way}{compare\_three\_way}}
+{\footnotesize\ttfamily template$<$concepts\+::detail\+::\+Valid\+Stored\+Type StoredT$>$ \\
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{record\+::field\+::\+Record\+Field}}$<$ StoredT $>$\+::\mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a4d6f1c137f3009058bc96b0bf13217dd}{compare\+\_\+three\+\_\+way}} =  std\+::compare\+\_\+three\+\_\+way}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1RecordField_a0eaf41634b62e94afe03882622fb8388}\label{structrecord_1_1field_1_1RecordField_a0eaf41634b62e94afe03882622fb8388}} 
+\index{record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}!equals@{equals}}
+\index{equals@{equals}!record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}}
+\doxysubsubsection{\texorpdfstring{equals}{equals}}
+{\footnotesize\ttfamily template$<$concepts\+::detail\+::\+Valid\+Stored\+Type StoredT$>$ \\
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{record\+::field\+::\+Record\+Field}}$<$ StoredT $>$\+::\mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a0eaf41634b62e94afe03882622fb8388}{equals}} =  std\+::equal\+\_\+to$<$StoredT$>$}
+
+\mbox{\Hypertarget{structrecord_1_1field_1_1RecordField_a11d0a98dbda549b9f759f0b3d8066fec}\label{structrecord_1_1field_1_1RecordField_a11d0a98dbda549b9f759f0b3d8066fec}} 
+\index{record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}!stored\_type@{stored\_type}}
+\index{stored\_type@{stored\_type}!record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}}
+\doxysubsubsection{\texorpdfstring{stored\_type}{stored\_type}}
+{\footnotesize\ttfamily template$<$concepts\+::detail\+::\+Valid\+Stored\+Type StoredT$>$ \\
+using \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{record\+::field\+::\+Record\+Field}}$<$ StoredT $>$\+::\mbox{\hyperlink{structrecord_1_1field_1_1RecordField_a11d0a98dbda549b9f759f0b3d8066fec}{stored\+\_\+type}} =  StoredT}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1RecordField_a1365343246ab250486604765043d401b}\label{structrecord_1_1field_1_1RecordField_a1365343246ab250486604765043d401b}} 
+\index{record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}!alignment@{alignment}}
+\index{alignment@{alignment}!record::field::RecordField$<$ StoredT $>$@{record::field::RecordField$<$ StoredT $>$}}
+\doxysubsubsection{\texorpdfstring{alignment}{alignment}}
+{\footnotesize\ttfamily template$<$concepts\+::detail\+::\+Valid\+Stored\+Type StoredT$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structrecord_1_1field_1_1RecordField}{record\+::field\+::\+Record\+Field}}$<$ StoredT $>$\+::alignment = alignof(StoredT)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{_2home_2dragos_2cxx-projects_2record_2include_2record_2record_8hpp-example}{}\doxysection{/home/dragos/cxx-\/projects/record/include/record/record.\+hpp}
+Performs lexicographic three-\/way comparison between two {\ttfamily Record}s.\+Compares fields sequentially according to the specified order, returning the first non-\/equivalent result. If all fields compare equivalent, returns the weakest common comparison category among fields, as determined by \`{}std\+::common\+\_\+comparison\+\_\+category\+\_\+t$<$ std\+::compare\+\_\+three\+\_\+way\+\_\+result\+\_\+t$<$typename Fields\+::stored\+\_\+type$>$... $>$\`{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Ord} & Comparison order\+:
+\begin{DoxyItemize}
+\item {\ttfamily Comparison\+Order\+::\+Declaration} (default) – follows logical field order. Preserves the semantic precedence expected by users (e.\+g., surname before given name).
+\item {\ttfamily Comparison\+Order\+::\+Storage} – follows physical layout. Cache-\/efficient, but may produce surprising ordering if fields are reordered for alignment. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lhs,rhs} & Records to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result of type std\+::common\+\_\+comparison\+\_\+category\+\_\+t$<$ std\+::compare\+\_\+three\+\_\+way\+\_\+result\+\_\+t$<$typename Fields\+::stored\+\_\+type$>$... \begin{quote}
+\end{quote}
+
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+All field types must satisfy {\ttfamily std\+::three\+\_\+way\+\_\+comparable}. If a field type defines its own {\ttfamily F\+::compare\+\_\+three\+\_\+way} functor, it is used instead of {\ttfamily std\+::compare\+\_\+three\+\_\+way}.
+\end{DoxyPrecond}
+\begin{DoxyNote}{Note}
+Defaults to {\ttfamily Declaration} order because comparison semantics often encode domain-\/specific precedence (e.\+g., sorting by last name, then first name). Storage order is provided for performance-\/sensitive contexts where any total order suffices.
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}

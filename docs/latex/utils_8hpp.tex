@@ -1,0 +1,86 @@
+\hypertarget{utils_8hpp}{}\doxysection{include/record/detail/utils.hpp File Reference}
+\label{utils_8hpp}\index{include/record/detail/utils.hpp@{include/record/detail/utils.hpp}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for utils.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1FixedString}{record\+::detail\+::utils\+::\+Fixed\+String$<$ N $>$}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1IndexOfImpl}{record\+::detail\+::utils\+::utils\+::detail\+::\+Index\+Of\+Impl$<$ T, Ts $>$}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1AllUniqueImpl_3_4}{record\+::detail\+::utils\+::utils\+::detail\+::\+All\+Unique\+Impl$<$$>$}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1AllUniqueImpl_3_01T_00_01Ts_8_8_8_01_4}{record\+::detail\+::utils\+::utils\+::detail\+::\+All\+Unique\+Impl$<$ T, Ts... $>$}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1set_1_1Set}{record\+::detail\+::utils\+::set\+::\+Set$<$ Ts $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord}{record}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail}{record\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils}{record\+::detail\+::utils}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds}{record\+::detail\+::utils\+::predicate\+\_\+folds}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_1_1detail}{record\+::detail\+::utils\+::predicate\+\_\+folds\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils}{record\+::detail\+::utils\+::utils}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_1_1detail}{record\+::detail\+::utils\+::utils\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set}{record\+::detail\+::utils\+::set}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail}{record\+::detail\+::utils\+::set\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utils_8hpp_a0e75eb428dd88ed9feadf2a1cf47a2cc}{RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+DETAIL\+\_\+\+UTILS\+\_\+\+HPP}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename $>$ class Pred, typename... Args$>$ }\\\mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_aa621a929a2898d0f0a9210c3a5092954}{record\+::detail\+::utils\+::predicate\+\_\+folds\+::requires}} (... \&\&detail\+::\+Value\+Predicate$<$ Pred$<$ Args $>$$>$) const expr bool All\+Of = (... $\vert$$\vert$ Pred$<$Args$>$\+::value)
+\item 
+{\footnotesize template$<$bool Base, template$<$ typename $>$ class Pred, typename... Args$>$ }\\\mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_ac4b9c1e5e5f4cf63904ed2af55ae14ae}{record\+::detail\+::utils\+::predicate\+\_\+folds\+::requires}} (... \&\&detail\+::\+Value\+Predicate$<$ Pred$<$ Args $>$$>$) const expr bool All\+Or = Base $\vert$$\vert$ (... $\vert$$\vert$ Pred$<$Args$>$\+::value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1predicate__folds_1_1detail_acf6a906ee4749713a5d9ca1b14042106}{record\+::detail\+::utils\+::predicate\+\_\+folds\+::detail\+::\+Value\+Predicate}} = requires \{ typename T\+::value; \}
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_a32ca1bb7031804048ec7ccc68905a967}{record\+::detail\+::utils\+::utils\+::\+Is\+Any\+Of}} = (... $\vert$$\vert$ std\+::is\+\_\+same\+\_\+v$<$T, Ts$>$)
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_ab4d4beb3391371b0634e6f744cee73dd}{record\+::detail\+::utils\+::utils\+::\+Index\+Of}} = detail\+::\+Index\+Of\+Impl$<$T, Ts...$>$\{\}(std\+::index\+\_\+sequence\+\_\+for$<$Ts...$>$\{\})
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_aca468aaffde4a8724aa38111d9136f10}{record\+::detail\+::utils\+::utils\+::\+All\+Unique}} = detail\+::\+All\+Unique\+Impl$<$Ts...$>$\+::value
+\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail_afe044dd0169a4e857b633d2a7b6b27f8}{record\+::detail\+::utils\+::set\+::detail\+::\+Contains}} = false
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail_a697c8cdc3a9bddde2029199252a515cc}{record\+::detail\+::utils\+::set\+::detail\+::\+Contains$<$ T, Set$<$ Ts... $>$ $>$}} = utils\+::\+Is\+Any\+Of$<$T, Ts...$>$
+\item 
+{\footnotesize template$<$typename S1 , typename S2 $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail_ab90585eb8a446026c92c504785831592}{record\+::detail\+::utils\+::set\+::detail\+::\+Subset}} = false
+\item 
+{\footnotesize template$<$typename... As, typename... Bs$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_1_1detail_ad67a9b5feee30812e3ac96208da1cd4e}{record\+::detail\+::utils\+::set\+::detail\+::\+Subset$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}} = (... \&\& Contains$<$As, Set$<$Bs...$>$$>$)
+\item 
+{\footnotesize template$<$typename S1 , typename S2 $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_ad24b4b439de9c47457f26f15053d1563}{record\+::detail\+::utils\+::set\+::\+Set\+Equal}} = false
+\item 
+{\footnotesize template$<$typename... As, typename... Bs$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1set_aa4782453d18470d9ae36aaf9a9efa6a8}{record\+::detail\+::utils\+::set\+::\+Set\+Equal$<$ Set$<$ As... $>$, Set$<$ Bs... $>$ $>$}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utils_8hpp_a0e75eb428dd88ed9feadf2a1cf47a2cc}\label{utils_8hpp_a0e75eb428dd88ed9feadf2a1cf47a2cc}} 
+\index{utils.hpp@{utils.hpp}!RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP@{RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP}}
+\index{RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP@{RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP}{RECORD\_INCLUDE\_RECORD\_DETAIL\_UTILS\_HPP}}
+{\footnotesize\ttfamily \#define RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+DETAIL\+\_\+\+UTILS\+\_\+\+HPP}
+

@@ -1,0 +1,40 @@
+\hypertarget{namespacerecord_1_1detail_1_1utils_1_1utils}{}\doxysection{record\+::detail\+::utils\+::utils Namespace Reference}
+\label{namespacerecord_1_1detail_1_1utils_1_1utils}\index{record::detail::utils::utils@{record::detail::utils::utils}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_a32ca1bb7031804048ec7ccc68905a967}{Is\+Any\+Of}} = (... $\vert$$\vert$ std\+::is\+\_\+same\+\_\+v$<$T, Ts$>$)
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_ab4d4beb3391371b0634e6f744cee73dd}{Index\+Of}} = \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1IndexOfImpl}{detail\+::\+Index\+Of\+Impl}}$<$T, Ts...$>$\{\}(std\+::index\+\_\+sequence\+\_\+for$<$Ts...$>$\{\})
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils_1_1utils_aca468aaffde4a8724aa38111d9136f10}{All\+Unique}} = \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1AllUniqueImpl}{detail\+::\+All\+Unique\+Impl}}$<$Ts...$>$\+::value
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerecord_1_1detail_1_1utils_1_1utils_aca468aaffde4a8724aa38111d9136f10}\label{namespacerecord_1_1detail_1_1utils_1_1utils_aca468aaffde4a8724aa38111d9136f10}} 
+\index{record::detail::utils::utils@{record::detail::utils::utils}!AllUnique@{AllUnique}}
+\index{AllUnique@{AllUnique}!record::detail::utils::utils@{record::detail::utils::utils}}
+\doxysubsubsection{\texorpdfstring{AllUnique}{AllUnique}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+constexpr bool record\+::detail\+::utils\+::utils\+::\+All\+Unique = \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1AllUniqueImpl}{detail\+::\+All\+Unique\+Impl}}$<$Ts...$>$\+::value\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_1_1utils_1_1utils_ab4d4beb3391371b0634e6f744cee73dd}\label{namespacerecord_1_1detail_1_1utils_1_1utils_ab4d4beb3391371b0634e6f744cee73dd}} 
+\index{record::detail::utils::utils@{record::detail::utils::utils}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!record::detail::utils::utils@{record::detail::utils::utils}}
+\doxysubsubsection{\texorpdfstring{IndexOf}{IndexOf}}
+{\footnotesize\ttfamily template$<$typename T , typename... Ts$>$ \\
+constexpr std\+::size\+\_\+t record\+::detail\+::utils\+::utils\+::\+Index\+Of = \mbox{\hyperlink{structrecord_1_1detail_1_1utils_1_1utils_1_1detail_1_1IndexOfImpl}{detail\+::\+Index\+Of\+Impl}}$<$T, Ts...$>$\{\}(std\+::index\+\_\+sequence\+\_\+for$<$Ts...$>$\{\})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_1_1utils_1_1utils_a32ca1bb7031804048ec7ccc68905a967}\label{namespacerecord_1_1detail_1_1utils_1_1utils_a32ca1bb7031804048ec7ccc68905a967}} 
+\index{record::detail::utils::utils@{record::detail::utils::utils}!IsAnyOf@{IsAnyOf}}
+\index{IsAnyOf@{IsAnyOf}!record::detail::utils::utils@{record::detail::utils::utils}}
+\doxysubsubsection{\texorpdfstring{IsAnyOf}{IsAnyOf}}
+{\footnotesize\ttfamily template$<$typename T , typename... Ts$>$ \\
+constexpr bool record\+::detail\+::utils\+::utils\+::\+Is\+Any\+Of = (... $\vert$$\vert$ std\+::is\+\_\+same\+\_\+v$<$T, Ts$>$)\hspace{0.3cm}{\ttfamily [constexpr]}}
+

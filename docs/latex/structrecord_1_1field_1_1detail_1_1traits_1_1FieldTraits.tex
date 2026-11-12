@@ -1,0 +1,218 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$ Struct Template Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+
+
+Type traits for a collection of {\ttfamily Field}s.  
+
+
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyAssignment}{Copy\+Assignment}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1CopyConstruction}{Copy\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}{Default\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{Destruction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{Equality}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveAssignment}{Move\+Assignment}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}{Move\+Construction}}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1ThreeWayComparison}{Three\+Way\+Comparison}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aa59937529c429cea827262b71021675c}{Common\+Compare\+ResultT}} = std\+::common\+\_\+comparison\+\_\+category\+\_\+t$<$ std\+::strong\+\_\+ordering, Field\+Compare\+ResultT$<$ Fields $>$... $>$
+\begin{DoxyCompactList}\small\item\em The common comparison category of all fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a89a48102e642af0b706eaeb9ae1b65d4}{k\+Trivially\+Copyable}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe trivially copyable types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$concepts\+::\+Field F$>$ }\\static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}{Has}} = (... $\vert$$\vert$ std\+::same\+\_\+as$<$F, Fields$>$)
+\begin{DoxyCompactList}\small\item\em Evaluates to {\ttfamily true} if {\ttfamily F} is one of the Fields of this Record type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$concepts\+::\+Field... Fs$>$ }\\static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a1d055fec732c43e0dd3afef21940049a}{Has\+Any}} = (... $\vert$$\vert$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}{Has}}$<$Fs$>$)
+\begin{DoxyCompactList}\small\item\em Evaluates to {\ttfamily true} if any of {\ttfamily Fs} are Fields of this Record type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$concepts\+::\+Field... Fs$>$ }\\static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a08d79c5484e3aa9dc166016f5110127a}{Has\+All}} = (... \&\& \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}{Has}}$<$Fs$>$)
+\begin{DoxyCompactList}\small\item\em Evaluates to {\ttfamily true} if all of {\ttfamily Fs} are Fields of this Record type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$concepts\+::\+Field... Fs$>$ }\\static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_ab94e54fccc063fa45306b4635f915754}{Has\+None}} = !\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a1d055fec732c43e0dd3afef21940049a}{Has\+Any}}$<$Fs...$>$
+\begin{DoxyCompactList}\small\item\em Evaluates to {\ttfamily true} if none of {\ttfamily Fs} are Fields of this Record type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$concepts\+::\+Field... Fields$>$\newline
+struct record\+::field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields $>$}
+
+Type traits for a collection of {\ttfamily Field}s. 
+
+Contains conjunctions over various STL type traits, such as\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily std\+::is\+\_\+trivially\+\_\+copyable}
+\item \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Destruction}{Destruction}} traits
+\item Default Construction traits
+\item Move/\+Copy Semantics traits
+\item \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1Equality}{Equality}} and Three Way Comparison traits
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Fields} & A type pack, each satisfying the concept {\ttfamily Field} \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aa59937529c429cea827262b71021675c}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aa59937529c429cea827262b71021675c}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!CommonCompareResultT@{CommonCompareResultT}}
+\index{CommonCompareResultT@{CommonCompareResultT}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{CommonCompareResultT}{CommonCompareResultT}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+using \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aa59937529c429cea827262b71021675c}{Common\+Compare\+ResultT}} =  std\+::common\+\_\+comparison\+\_\+category\+\_\+t$<$ std\+::strong\+\_\+ordering, Field\+Compare\+ResultT$<$Fields$>$... $>$}
+
+
+
+The common comparison category of all fields. 
+
+That is, the weakest category that can represent the result of comparing any two fields of this type.
+
+If the pack is empty, defaults to {\ttfamily std\+::strong\+\_\+ordering}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!Has@{Has}}
+\index{Has@{Has}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{Has}{Has}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+template$<$concepts\+::\+Field F$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Has = (... $\vert$$\vert$ std\+::same\+\_\+as$<$F, Fields$>$)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Evaluates to {\ttfamily true} if {\ttfamily F} is one of the Fields of this Record type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & A type satisfying the {\ttfamily Field} concept.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{static\_assert(Record<FieldA, FieldB, FieldC>::Has<FieldA>);}
+\DoxyCodeLine{static\_assert(!Record<FieldA, FieldB, FieldC>::Has<FieldD>);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a08d79c5484e3aa9dc166016f5110127a}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a08d79c5484e3aa9dc166016f5110127a}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!HasAll@{HasAll}}
+\index{HasAll@{HasAll}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{HasAll}{HasAll}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+template$<$concepts\+::\+Field... Fs$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Has\+All = (... \&\& \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}{Has}}$<$Fs$>$)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Evaluates to {\ttfamily true} if all of {\ttfamily Fs} are Fields of this Record type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Fs} & A type pack, each satisfying the {\ttfamily Field} concept.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{static\_assert(Record<FieldA, FieldB, FieldC>::HasAll<FieldA, FieldB>);}
+\DoxyCodeLine{static\_assert(!Record<FieldA, FieldB, FieldC>::HasAll<FieldA, FieldB, FieldD>);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a1d055fec732c43e0dd3afef21940049a}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a1d055fec732c43e0dd3afef21940049a}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!HasAny@{HasAny}}
+\index{HasAny@{HasAny}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{HasAny}{HasAny}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+template$<$concepts\+::\+Field... Fs$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Has\+Any = (... $\vert$$\vert$ \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_aaa90becb843a88a917c0b2b3bf3bc7f7}{Has}}$<$Fs$>$)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Evaluates to {\ttfamily true} if any of {\ttfamily Fs} are Fields of this Record type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Fs} & A type pack, each satisfying the {\ttfamily Field} concept.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{static\_assert(Record<FieldA, FieldB, FieldC>::HasAny<FieldA, FieldD, FieldE>);}
+\DoxyCodeLine{static\_assert(!Record<FieldA, FieldB, FieldC>::HasAny<FieldD, FieldE, FieldF>);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_ab94e54fccc063fa45306b4635f915754}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_ab94e54fccc063fa45306b4635f915754}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!HasNone@{HasNone}}
+\index{HasNone@{HasNone}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{HasNone}{HasNone}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+template$<$concepts\+::\+Field... Fs$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Has\+None = !\mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a1d055fec732c43e0dd3afef21940049a}{Has\+Any}}$<$Fs...$>$\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Evaluates to {\ttfamily true} if none of {\ttfamily Fs} are Fields of this Record type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Fs} & A type pack, each satisfying the {\ttfamily Field} concept.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{static\_assert(Record<FieldA, FieldB, FieldC>::HasNone<FieldD, FieldE, FieldF>);}
+\DoxyCodeLine{static\_assert(!Record<FieldA, FieldB, FieldC>::HasNone<FieldA, FieldD, FieldE>);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a89a48102e642af0b706eaeb9ae1b65d4}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_a89a48102e642af0b706eaeb9ae1b65d4}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}!kTriviallyCopyable@{kTriviallyCopyable}}
+\index{kTriviallyCopyable@{kTriviallyCopyable}!record::field::detail::traits::FieldTraits$<$ Fields $>$@{record::field::detail::traits::FieldTraits$<$ Fields $>$}}
+\doxysubsubsection{\texorpdfstring{kTriviallyCopyable}{kTriviallyCopyable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::k\+Trivially\+Copyable\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                std::is\_trivially\_copyable,}
+\DoxyCodeLine{                \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{            >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe trivially copyable types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+trivially\+\_\+copyable$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The record is effectively trivially copyable, meaning instances can be safely copied using {\ttfamily memcpy}/{\ttfamily memmove}, {\bfseries{and}}
+\item The copy and move constructors and assignment operators are trivial, {\bfseries{and}}
+\item The exception specifications of the copy and move constructors and assignment operators are {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

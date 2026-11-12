@@ -1,0 +1,114 @@
+\hypertarget{namespacerecord_1_1detail}{}\doxysection{record\+::detail Namespace Reference}
+\label{namespacerecord_1_1detail}\index{record::detail@{record::detail}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1contracts}{contracts}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1utils}{utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{Field\+BindingT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_ae868fe8f20040c410ce2837c4cd116f1}{Args\+For}}
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}{No\+Throw\+Args\+For}}
+\item 
+{\footnotesize template$<$typename $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}{Field\+Binding\+Spec}} = false
+\item 
+{\footnotesize template$<$Bind\+Strategy S, Field F, Args\+For$<$ F $>$... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_aa2b400be168af89ee3baad1599f2d82b}{Field\+Binding\+Spec$<$ Field\+Binding\+T$<$ S, F, Args... $>$ $>$}} = true
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a199ae8a2a7bd3bfafb8d1811fb56fb27}{Field\+Binding}} = \mbox{\hyperlink{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}{Field\+Binding\+Spec}}$<$T$>$
+\item 
+{\footnotesize template$<$typename F , typename B $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a0ed659e47894af57e15a22a9f16031a0}{Bind\+For}}
+\item 
+{\footnotesize template$<$typename F , typename B $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_ad64a68857b0f9cef5e7552e270009c58}{No\+Throw\+Bind\+For}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerecord_1_1detail_ae868fe8f20040c410ce2837c4cd116f1}\label{namespacerecord_1_1detail_ae868fe8f20040c410ce2837c4cd116f1}} 
+\index{record::detail@{record::detail}!ArgsFor@{ArgsFor}}
+\index{ArgsFor@{ArgsFor}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{ArgsFor}{ArgsFor}}
+{\footnotesize\ttfamily template$<$typename F , typename... Args$>$ \\
+concept record\+::detail\+::\+Args\+For}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= Field<F>}
+\DoxyCodeLine{            \&\& std::constructible\_from<}
+\DoxyCodeLine{                \textcolor{keyword}{typename} F::stored\_type,}
+\DoxyCodeLine{                Args...}
+\DoxyCodeLine{            >}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1detail_a0ed659e47894af57e15a22a9f16031a0}\label{namespacerecord_1_1detail_a0ed659e47894af57e15a22a9f16031a0}} 
+\index{record::detail@{record::detail}!BindFor@{BindFor}}
+\index{BindFor@{BindFor}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{BindFor}{BindFor}}
+{\footnotesize\ttfamily template$<$typename F , typename B $>$ \\
+concept record\+::detail\+::\+Bind\+For}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= Field<F>}
+\DoxyCodeLine{            \&\& FieldBinding<B>}
+\DoxyCodeLine{            \&\& std::same\_as<typename B::FieldT, F>}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1detail_a199ae8a2a7bd3bfafb8d1811fb56fb27}\label{namespacerecord_1_1detail_a199ae8a2a7bd3bfafb8d1811fb56fb27}} 
+\index{record::detail@{record::detail}!FieldBinding@{FieldBinding}}
+\index{FieldBinding@{FieldBinding}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{FieldBinding}{FieldBinding}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept record\+::detail\+::\+Field\+Binding = \mbox{\hyperlink{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}{Field\+Binding\+Spec}}$<$T$>$}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}\label{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}} 
+\index{record::detail@{record::detail}!FieldBindingSpec@{FieldBindingSpec}}
+\index{FieldBindingSpec@{FieldBindingSpec}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{FieldBindingSpec}{FieldBindingSpec}}
+{\footnotesize\ttfamily template$<$typename $>$ \\
+constexpr bool record\+::detail\+::\+Field\+Binding\+Spec = false\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_aa2b400be168af89ee3baad1599f2d82b}\label{namespacerecord_1_1detail_aa2b400be168af89ee3baad1599f2d82b}} 
+\index{record::detail@{record::detail}!FieldBindingSpec$<$ FieldBindingT$<$ S, F, Args... $>$ $>$@{FieldBindingSpec$<$ FieldBindingT$<$ S, F, Args... $>$ $>$}}
+\index{FieldBindingSpec$<$ FieldBindingT$<$ S, F, Args... $>$ $>$@{FieldBindingSpec$<$ FieldBindingT$<$ S, F, Args... $>$ $>$}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{FieldBindingSpec$<$ FieldBindingT$<$ S, F, Args... $>$ $>$}{FieldBindingSpec< FieldBindingT< S, F, Args... > >}}
+{\footnotesize\ttfamily template$<$Bind\+Strategy S, Field F, Args\+For$<$ F $>$... Args$>$ \\
+constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}{record\+::detail\+::\+Field\+Binding\+Spec}}$<$ \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{Field\+BindingT}}$<$ S, F, Args... $>$ $>$ = true\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}\label{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}} 
+\index{record::detail@{record::detail}!NoThrowArgsFor@{NoThrowArgsFor}}
+\index{NoThrowArgsFor@{NoThrowArgsFor}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{NoThrowArgsFor}{NoThrowArgsFor}}
+{\footnotesize\ttfamily template$<$typename F , typename... Args$>$ \\
+concept record\+::detail\+::\+No\+Throw\+Args\+For}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= Field<F>}
+\DoxyCodeLine{            \&\& std::is\_nothrow\_constructible\_v<}
+\DoxyCodeLine{                \textcolor{keyword}{typename} F::stored\_type,}
+\DoxyCodeLine{                Args...}
+\DoxyCodeLine{            >}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerecord_1_1detail_ad64a68857b0f9cef5e7552e270009c58}\label{namespacerecord_1_1detail_ad64a68857b0f9cef5e7552e270009c58}} 
+\index{record::detail@{record::detail}!NoThrowBindFor@{NoThrowBindFor}}
+\index{NoThrowBindFor@{NoThrowBindFor}!record::detail@{record::detail}}
+\doxysubsubsection{\texorpdfstring{NoThrowBindFor}{NoThrowBindFor}}
+{\footnotesize\ttfamily template$<$typename F , typename B $>$ \\
+concept record\+::detail\+::\+No\+Throw\+Bind\+For}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= BindFor<F, B>}
+\DoxyCodeLine{            \&\& B::kNoThrow}
+
+\end{DoxyCode}

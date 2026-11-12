@@ -1,0 +1,68 @@
+\hypertarget{structrecord_1_1detail_1_1FieldBindingT}{}\doxysection{record\+::detail\+::Field\+BindingT$<$ Strategy, F, Args $>$ Struct Template Reference}
+\label{structrecord_1_1detail_1_1FieldBindingT}\index{record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}}
+
+
+{\ttfamily \#include $<$record.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_aa764aa738e368a0ddf2798b21298bbb6}{FieldT}} = F
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_ab8d6083498ed44335e503b986ea55809}{Field\+BindingT}} (Args \&\&... a) noexcept(\mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_a9b555464b6232910ab99735a81094f5a}{k\+No\+Throw}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ std\+::conditional\+\_\+t$<$ Strategy==\mbox{\hyperlink{namespacerecord_a5772dcbe018aeede9fbd90fc217952aea5fb63579fc981698f97d55bfecb213ea}{Bind\+Strategy\+::\+Copy}}, std\+::remove\+\_\+cvref\+\_\+t$<$ Args $>$, Args $>$... $>$ \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_a0e4eec68f5a25a76e61317f3c4dd4490}{args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_a9b555464b6232910ab99735a81094f5a}{k\+No\+Throw}} = \mbox{\hyperlink{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}{No\+Throw\+Args\+For}}$<$F, Args...$>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structrecord_1_1detail_1_1FieldBindingT_aa764aa738e368a0ddf2798b21298bbb6}\label{structrecord_1_1detail_1_1FieldBindingT_aa764aa738e368a0ddf2798b21298bbb6}} 
+\index{record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}!FieldT@{FieldT}}
+\index{FieldT@{FieldT}!record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}}
+\doxysubsubsection{\texorpdfstring{FieldT}{FieldT}}
+{\footnotesize\ttfamily template$<$Bind\+Strategy Strategy, Field F, Args\+For$<$ F $>$... Args$>$ \\
+using \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{record\+::detail\+::\+Field\+BindingT}}$<$ Strategy, F, Args $>$\+::\mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT_aa764aa738e368a0ddf2798b21298bbb6}{FieldT}} =  F}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrecord_1_1detail_1_1FieldBindingT_ab8d6083498ed44335e503b986ea55809}\label{structrecord_1_1detail_1_1FieldBindingT_ab8d6083498ed44335e503b986ea55809}} 
+\index{record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}!FieldBindingT@{FieldBindingT}}
+\index{FieldBindingT@{FieldBindingT}!record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}}
+\doxysubsubsection{\texorpdfstring{FieldBindingT()}{FieldBindingT()}}
+{\footnotesize\ttfamily template$<$Bind\+Strategy Strategy, Field F, Args\+For$<$ F $>$... Args$>$ \\
+constexpr \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{record\+::detail\+::\+Field\+BindingT}}$<$ Strategy, F, Args $>$\+::\mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{Field\+BindingT}} (\begin{DoxyParamCaption}\item[{Args \&\&...}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1detail_1_1FieldBindingT_a0e4eec68f5a25a76e61317f3c4dd4490}\label{structrecord_1_1detail_1_1FieldBindingT_a0e4eec68f5a25a76e61317f3c4dd4490}} 
+\index{record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}!args@{args}}
+\index{args@{args}!record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily template$<$Bind\+Strategy Strategy, Field F, Args\+For$<$ F $>$... Args$>$ \\
+std\+::tuple$<$ std\+::conditional\+\_\+t$<$ Strategy == \mbox{\hyperlink{namespacerecord_a5772dcbe018aeede9fbd90fc217952aea5fb63579fc981698f97d55bfecb213ea}{Bind\+Strategy\+::\+Copy}}, std\+::remove\+\_\+cvref\+\_\+t$<$Args$>$, Args $>$... $>$ \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{record\+::detail\+::\+Field\+BindingT}}$<$ Strategy, F, Args $>$\+::args}
+
+\mbox{\Hypertarget{structrecord_1_1detail_1_1FieldBindingT_a9b555464b6232910ab99735a81094f5a}\label{structrecord_1_1detail_1_1FieldBindingT_a9b555464b6232910ab99735a81094f5a}} 
+\index{record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::detail::FieldBindingT$<$ Strategy, F, Args $>$@{record::detail::FieldBindingT$<$ Strategy, F, Args $>$}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$Bind\+Strategy Strategy, Field F, Args\+For$<$ F $>$... Args$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{record\+::detail\+::\+Field\+BindingT}}$<$ Strategy, F, Args $>$\+::k\+No\+Throw = \mbox{\hyperlink{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}{No\+Throw\+Args\+For}}$<$F, Args...$>$\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{record_8hpp}{record.\+hpp}}\end{DoxyCompactItemize}

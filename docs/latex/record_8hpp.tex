@@ -1,0 +1,129 @@
+\hypertarget{record_8hpp}{}\doxysection{include/record/record.hpp File Reference}
+\label{record_8hpp}\index{include/record/record.hpp@{include/record/record.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$compare$>$}\newline
+{\ttfamily \#include $<$concepts$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$record/field.\+hpp$>$}\newline
+Include dependency graph for record.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrecord_1_1detail_1_1FieldBindingT}{record\+::detail\+::\+Field\+Binding\+T$<$ Strategy, F, Args $>$}}
+\item 
+class \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1BindContract}{record\+::detail\+::contracts\+::\+Bind\+Contract$<$ Strategy, F, Args $>$}}
+\item 
+class \mbox{\hyperlink{classrecord_1_1detail_1_1contracts_1_1RecordContracts}{record\+::detail\+::contracts\+::\+Record\+Contracts$<$ Fields $>$}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1tuple__size_3_01record_1_1Record_3_01Fields_8_8_8_01_4_01_4}{std\+::tuple\+\_\+size$<$ record\+::\+Record$<$ Fields... $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1tuple__element_3_01I_00_01record_1_1Record_3_01Fields_8_8_8_01_4_01_4}{std\+::tuple\+\_\+element$<$ I, record\+::\+Record$<$ Fields... $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerecord}{record}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail}{record\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacerecord_1_1detail_1_1contracts}{record\+::detail\+::contracts}}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{record_8hpp_a01e1f04487edf6cb159ea5ce10ebc679}{RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+RECORD\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{record_8hpp_a4b00f6c503d76470dc5212655570293b}{DELETE}}(msg)~delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename... $>$ typename Target$>$ }\\using \mbox{\hyperlink{namespacerecord_ae3c8623ff8f35819b4f603ba961681e6}{record\+::\+Rebind}} = Target$<$ Fields... $>$
+\begin{DoxyCompactList}\small\item\em A heterogeneous record container with compile-\/time layout optimization. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacerecord_a6442c081be2fc000a9febbd20252e7fb}{record\+::\+Traits}} = field\+::detail\+::traits\+::\+Field\+Traits$<$ Fields... $>$
+\begin{DoxyCompactList}\small\item\em Type-\/trait queries for the Fields of this Record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacerecord_a5772dcbe018aeede9fbd90fc217952ae}{record\+::\+Bind\+Strategy}} \{ \mbox{\hyperlink{namespacerecord_a5772dcbe018aeede9fbd90fc217952aea5fb63579fc981698f97d55bfecb213ea}{record\+::\+Copy}}
+, \mbox{\hyperlink{namespacerecord_a5772dcbe018aeede9fbd90fc217952aea67d2f6740a8eaebf4d5c6f79be8da481}{record\+::\+Forward}}
+ \}
+\begin{DoxyCompactList}\small\item\em Controls argument storage in the intermediate binding. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacerecord_a8de9e0e001e0db4b8b441b561d6545ea}{record\+::\+Comparison\+Order}} \{ \mbox{\hyperlink{namespacerecord_a8de9e0e001e0db4b8b441b561d6545eaa6246655a4c0a99b49f104cd87a0a7a7a}{record\+::\+Declaration}}
+, \mbox{\hyperlink{namespacerecord_a8de9e0e001e0db4b8b441b561d6545eaa8c4aa541ee911e8d80451ef8cc304806}{record\+::\+Storage}}
+ \}
+\begin{DoxyCompactList}\small\item\em Field traversal order options for {\ttfamily equals} and {\ttfamily compare} helper functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Bind\+Strategy Strategy, Field F, detail\+::\+Args\+For$<$ F $>$... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacerecord_abfa74055ac09eacff87436d75bc7d3a9}{record\+::\+Bind}} (Args \&\&... args) noexcept(detail\+::contracts\+::\+Bind\+Contract$<$ Strategy, F, Args... $>$\+::k\+Is\+Noexcept) requires(detail
+\begin{DoxyCompactList}\small\item\em Creates a field binding for use in {\ttfamily Record}\textquotesingle{}s parameterised constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Field F, detail\+::\+Args\+For$<$ F $>$... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacerecord_a28eda1049a678fd356380db2f618083e}{record\+::\+Bind}} (Args \&\&... args) noexcept(detail\+::contracts\+::\+Bind\+Contract$<$ Bind\+Strategy\+::\+Copy, F, Args... $>$\+::k\+Is\+Noexcept) requires(detail
+\begin{DoxyCompactList}\small\item\em Creates a field binding for use in {\ttfamily Record}\textquotesingle{}s parameterised constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Bind\+Strategy Strategy, Field F, typename... Args$>$ }\\constexpr void \mbox{\hyperlink{namespacerecord_a4f4fedea0050f5fb44df30bb8381350e}{record\+::\+Bind}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} Args \&\&... args) noexcept requires(!detail
+\begin{DoxyCompactList}\small\item\em Trap overload of Bind$<$\+Bind\+Strategy Strategy, Field F, typename... Args$>$ \end{DoxyCompactList}\item 
+{\footnotesize template$<$Field F, typename... Args$>$ }\\constexpr void \mbox{\hyperlink{namespacerecord_ad399520d348035b14bb410dbc009bf21}{record\+::\+Bind}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} Args \&\&... args) noexcept requires(!detail
+\begin{DoxyCompactList}\small\item\em Trap overload of Bind$<$\+Field F, typename... Args$>$ \end{DoxyCompactList}\item 
+constexpr constexpr Record() noexcept requires(Contracts \mbox{\hyperlink{namespacerecord_a8829e63ca397e6f3d9e7dc0d36c671da}{record\+::\+Record}} () noexcept(Contracts\+::\+Default\+Constructor\+::k\+Is\+Noexcept) requires(Contracts
+\item 
+{\footnotesize template$<$detail\+::\+Field\+Binding... Binds$>$ }\\\mbox{\hyperlink{namespacerecord_a7edc5f7cfe5a8cbb8df78a692c9a9102}{record\+::requires}} ((sizeof...(Binds)==k\+Field\+Count) \&\&detail\+::utils\+::set\+::\+Set\+Equal$<$ detail\+::utils\+::set\+::\+Set$<$ Fields... $>$, detail\+::utils\+::set\+::\+Set$<$ typename std\+::remove\+\_\+cvref\+\_\+t$<$ Binds $>$\+::Field\+T... $>$ $>$) explicit const expr Record(Binds \&\&... binds) noexcept((... \&\&detail\+::\+No\+Throw\+Bind\+For$<$ typename std\+::remove\+\_\+cvref\+\_\+t$<$ Binds $>$\+::FieldT, std\+::remove\+\_\+cvref\+\_\+t$<$ Binds $>$ $>$))
+\begin{DoxyCompactList}\small\item\em Constructs a record from a set of Field bindings. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{namespacerecord_aac5272868881ed7e9d6ed07e1f740c4c}{record\+::\+Record}} (Record \&\&) noexcept requires(!Contracts
+\item 
+constexpr Record \& \mbox{\hyperlink{namespacerecord_a27eb1745962571b58152bb05f90e25fa}{record\+::operator=}} (Record \&\&) noexcept requires(!Contracts
+\item 
+constexpr constexpr $\sim$Record() noexcept requires(Contracts \mbox{\hyperlink{namespacerecord_afa45f0308b2e5802c680485de8eb7f33}{record\+::$\sim$\+Record}} () noexcept(Contracts\+::\+Destructor\+::k\+Is\+Noexcept) requires(Contracts
+\item 
+constexpr bool \mbox{\hyperlink{namespacerecord_a678e0b0da9705726055fa7452a68cb59}{record\+::operator==}} (const Record \&)
+\begin{DoxyCompactList}\small\item\em Equality comparison operator, member version. \end{DoxyCompactList}\item 
+constexpr friend bool \mbox{\hyperlink{namespacerecord_aa318dae3cda18a6d1495db5258fbebe1}{record\+::operator==}} (const Record \&, const Record \&)
+\begin{DoxyCompactList}\small\item\em Equality comparison operator, free function version. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{namespacerecord_a7d24b98163bd6c6cc42cb9a03e847672}{record\+::operator$<$=$>$}} (const Record \&)
+\begin{DoxyCompactList}\small\item\em Three way comparison operator, member version. \end{DoxyCompactList}\item 
+constexpr friend auto \mbox{\hyperlink{namespacerecord_a2d8c46a86793ce529052af0ffbb0a333}{record\+::operator$<$=$>$}} (const Record \&, const Record \&)
+\begin{DoxyCompactList}\small\item\em Three way comparison operator, free function version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_ae868fe8f20040c410ce2837c4cd116f1}{record\+::detail\+::\+Args\+For}}
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a144f3488441c5bf51ac2666cb0718c68}{record\+::detail\+::\+No\+Throw\+Args\+For}}
+\item 
+{\footnotesize template$<$typename $>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_a8904a28f65ee0cb30c575dfcf15f8985}{record\+::detail\+::\+Field\+Binding\+Spec}} = false
+\item 
+{\footnotesize template$<$Bind\+Strategy S, Field F, Args\+For$<$ F $>$... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacerecord_1_1detail_aa2b400be168af89ee3baad1599f2d82b}{record\+::detail\+::\+Field\+Binding\+Spec$<$ Field\+Binding\+T$<$ S, F, Args... $>$ $>$}} = true
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a199ae8a2a7bd3bfafb8d1811fb56fb27}{record\+::detail\+::\+Field\+Binding}} = Field\+Binding\+Spec$<$T$>$
+\item 
+{\footnotesize template$<$typename F , typename B $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_a0ed659e47894af57e15a22a9f16031a0}{record\+::detail\+::\+Bind\+For}}
+\item 
+{\footnotesize template$<$typename F , typename B $>$ }\\concept \mbox{\hyperlink{namespacerecord_1_1detail_ad64a68857b0f9cef5e7552e270009c58}{record\+::detail\+::\+No\+Throw\+Bind\+For}}
+\item 
+constexpr constexpr Record(const Record \&) noexcept requires(Contracts \mbox{\hyperlink{namespacerecord_af5119b03f5424dff9e055d253880e8f9}{record\+::\+Record}} (const Record \&other) noexcept(Contracts\+::\+Copy\+Constructor\+::k\+Is\+Noexcept) requires(Contracts
+\item 
+constexpr Record \&constexpr operator=(const Record \&) noexcept requires(Contracts Record \& \mbox{\hyperlink{namespacerecord_a7608e5fd76f18749ff7f307cdfba72d1}{record\+::operator=}} (const Record \&other) noexcept(Contracts\+::\+Copy\+Assignment\+::k\+Is\+Noexcept) requires(Contracts
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{record_8hpp_a4b00f6c503d76470dc5212655570293b}\label{record_8hpp_a4b00f6c503d76470dc5212655570293b}} 
+\index{record.hpp@{record.hpp}!DELETE@{DELETE}}
+\index{DELETE@{DELETE}!record.hpp@{record.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE}{DELETE}}
+{\footnotesize\ttfamily \#define DELETE(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~delete}
+
+\mbox{\Hypertarget{record_8hpp_a01e1f04487edf6cb159ea5ce10ebc679}\label{record_8hpp_a01e1f04487edf6cb159ea5ce10ebc679}} 
+\index{record.hpp@{record.hpp}!RECORD\_INCLUDE\_RECORD\_RECORD\_HPP@{RECORD\_INCLUDE\_RECORD\_RECORD\_HPP}}
+\index{RECORD\_INCLUDE\_RECORD\_RECORD\_HPP@{RECORD\_INCLUDE\_RECORD\_RECORD\_HPP}!record.hpp@{record.hpp}}
+\doxysubsubsection{\texorpdfstring{RECORD\_INCLUDE\_RECORD\_RECORD\_HPP}{RECORD\_INCLUDE\_RECORD\_RECORD\_HPP}}
+{\footnotesize\ttfamily \#define RECORD\+\_\+\+INCLUDE\+\_\+\+RECORD\+\_\+\+RECORD\+\_\+\+HPP}
+

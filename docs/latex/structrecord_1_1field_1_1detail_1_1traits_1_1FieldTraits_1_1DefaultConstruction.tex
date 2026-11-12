@@ -1,0 +1,109 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Default\+Construction Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_aecf234292c459f8cc1079c96f42a0a36}{k\+Trivial}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe trivially default constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_ae2106f73a95732d4b4ee5a22c6556bfb}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe default constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_afcb378bd64d6f0f740de256798415bed}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow default constructible types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_ae2106f73a95732d4b4ee5a22c6556bfb}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_ae2106f73a95732d4b4ee5a22c6556bfb}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Default\+Construction\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_default\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe default constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+default\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The default constructor participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_afcb378bd64d6f0f740de256798415bed}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_afcb378bd64d6f0f740de256798415bed}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Default\+Construction\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_nothrow\_default\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow default constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+nothrow\+\_\+default\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specification of the default constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_aecf234292c459f8cc1079c96f42a0a36}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1DefaultConstruction_aecf234292c459f8cc1079c96f42a0a36}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}!kTrivial@{kTrivial}}
+\index{kTrivial@{kTrivial}!record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::DefaultConstruction}}
+\doxysubsubsection{\texorpdfstring{kTrivial}{kTrivial}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Default\+Construction\+::k\+Trivial\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_trivially\_default\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe trivially default constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+trivially\+\_\+default\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise, it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The default constructor participates in overload resolution, {\bfseries{and}}
+\item The default constructor is trivial, {\bfseries{and}}
+\item The exception specification of the default constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}

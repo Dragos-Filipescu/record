@@ -1,0 +1,109 @@
+\hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}{}\doxysection{record\+::field\+::detail\+::traits\+::Field\+Traits$<$ Fields $>$\+::Move\+Construction Struct Reference}
+\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction}\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}}
+
+
+{\ttfamily \#include $<$field.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a1f32fb69528cd8fb7cfd6677941a47ec}{k\+Trivial}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe trivially move constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a08c003dec99416a7cf2d97c6fba6a2da}{k\+Available}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe move constructible types. \end{DoxyCompactList}\item 
+static constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_aded52f8c673af1fd4e85861322017865}{k\+No\+Throw}}
+\begin{DoxyCompactList}\small\item\em Member constant which evaluates to {\ttfamily true} if all fields describe nothrow move constructible types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a08c003dec99416a7cf2d97c6fba6a2da}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a08c003dec99416a7cf2d97c6fba6a2da}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}!kAvailable@{kAvailable}}
+\index{kAvailable@{kAvailable}!record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}}
+\doxysubsubsection{\texorpdfstring{kAvailable}{kAvailable}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Move\+Construction\+::k\+Available\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_move\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe move constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+move\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The move constructor participates in overload resolution. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_aded52f8c673af1fd4e85861322017865}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_aded52f8c673af1fd4e85861322017865}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}!kNoThrow@{kNoThrow}}
+\index{kNoThrow@{kNoThrow}!record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}}
+\doxysubsubsection{\texorpdfstring{kNoThrow}{kNoThrow}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Move\+Construction\+::k\+No\+Throw\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_nothrow\_move\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe nothrow move constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The exception specification of the move constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}\mbox{\Hypertarget{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a1f32fb69528cd8fb7cfd6677941a47ec}\label{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits_1_1MoveConstruction_a1f32fb69528cd8fb7cfd6677941a47ec}} 
+\index{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}!kTrivial@{kTrivial}}
+\index{kTrivial@{kTrivial}!record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction@{record::field::detail::traits::FieldTraits$<$ Fields $>$::MoveConstruction}}
+\doxysubsubsection{\texorpdfstring{kTrivial}{kTrivial}}
+{\footnotesize\ttfamily template$<$concepts\+::\+Field... Fields$>$ \\
+constexpr bool \mbox{\hyperlink{structrecord_1_1field_1_1detail_1_1traits_1_1FieldTraits}{record\+::field\+::detail\+::traits\+::\+Field\+Traits}}$<$ Fields $>$\+::Move\+Construction\+::k\+Trivial\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= kAllOf<}
+\DoxyCodeLine{                    std::is\_trivially\_move\_constructible,}
+\DoxyCodeLine{                    \textcolor{keyword}{typename} Fields::stored\_type...}
+\DoxyCodeLine{                >}
+
+\end{DoxyCode}
+
+
+Member constant which evaluates to {\ttfamily true} if all fields describe trivially move constructible types. 
+
+That is, for each field {\ttfamily F}, if {\ttfamily T} is {\ttfamily F\+::stored\+\_\+type}, then {\ttfamily std\+::is\+\_\+trivially\+\_\+move\+\_\+constructible$<$\+T$>$\+::value} evaluates to {\ttfamily true}.
+
+Otherwise it evaluates to {\ttfamily false}.
+
+If {\ttfamily true}\+:
+
+
+\begin{DoxyItemize}
+\item The move constructor participates in overload resolution, {\bfseries{and}}
+\item The move constructor is trivial, {\bfseries{and}}
+\item The exception specification of the move constructor is {\ttfamily noexcept}. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/record/\mbox{\hyperlink{field_8hpp}{field.\+hpp}}\end{DoxyCompactItemize}
