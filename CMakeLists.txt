@@ -45,7 +45,7 @@ if(BUILD_TESTING)
     enable_testing()
 
     add_executable(${PROJECT_NAME}_tests tests/main.cpp
-            tests/test_get.hpp)
+    )
 
     target_link_libraries(${PROJECT_NAME}_tests PRIVATE ${PROJECT_NAME})
 
@@ -61,13 +61,4 @@ if(BUILD_TESTING)
     endif()
 
     add_test(NAME ${PROJECT_NAME}_tests COMMAND ${PROJECT_NAME}_tests)
-endif()
-
-find_package(Doxygen)
-if(DOXYGEN_FOUND)
-    doxygen_add_docs(
-            docs
-            ${CMAKE_CURRENT_SOURCE_DIR}/include
-            COMMENT "Generating API documentation with Doxygen"
-    )
 endif()

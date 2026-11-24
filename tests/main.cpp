@@ -53,6 +53,15 @@ namespace record::tests {
             static_assert(Traits::HasNone<Height, Flag> == true);
             static_assert(Traits::HasNone<Name, Age, Height> == false);
 
+            using R1 = Record<Name, Age, Height, Flag>;
+            using R2 = Record<Age, Name, Height, Flag>;
+            using R3 = Record<Height, Name, Age, Flag>;
+            using R4 = Record<Flag, Name, Age, Height>;
+
+            static_assert(std::same_as<R1::Canonical, R2::Canonical>);
+            static_assert(std::same_as<R1::Canonical, R3::Canonical>);
+            static_assert(std::same_as<R1::Canonical, R4::Canonical>);
+
             std::cout << "  fields::test_traits...[OK]\n";
         }
 
@@ -97,8 +106,8 @@ namespace record::tests {
                 std::cout << "  special_member_functions::test_defaultCtor...[OK]\n";
             }
 
-            void test_BindCtor() {
-                std::cout << "  special_member_functions::test_BindCtor...[START]\n";
+            void test_bindCtor() {
+                std::cout << "  special_member_functions::test_bindCtor...[START]\n";
                 using R = Record<Name, Age>;
                 R r{
                     Bind<Age>(25),
@@ -110,50 +119,50 @@ namespace record::tests {
                 std::cout << "Age: " << age << '\n';
                 assert(name == "Alice");
                 assert(age == 25);
-                std::cout << "  special_member_functions::test_BindCtor...[OK]\n";
+                std::cout << "  special_member_functions::test_bindCtor...[OK]\n";
             }
 
-            void test_CopyCtor() {
-                std::cout << "  special_member_functions::test_CopyCtor...[START]\n";
+            void test_copyCtor() {
+                std::cout << "  special_member_functions::test_copyCtor...[START]\n";
                 using R = Record<Name, Age>;
                 R a{ Bind<Name>("Bob"), Bind<Age>(30) };
                 R b = a;
                 assert(get<Name>(a) == "Bob");
                 assert(get<Name>(b) == "Bob");
                 assert(get<Age>(b) == 30);
-                std::cout << "  special_member_functions::test_CopyCtor...[OK]\n";
+                std::cout << "  special_member_functions::test_copyCtor...[OK]\n";
             }
 
-            void test_CopyAssignmentOp() {
-                std::cout << "  special_member_functions::test_CopyAssignmentOp...[START]\n";
+            void test_copyAssignmentOp() {
+                std::cout << "  special_member_functions::test_copyAssignmentOp...[START]\n";
                 using R = Record<Name, Age>;
                 R a{ Bind<Name>("Charlie"), Bind<Age>(40) };
                 R b{ Bind<Name>("Dave"), Bind<Age>(50) };
                 b = a;
                 assert(get<Name>(b) == "Charlie");
                 assert(get<Age>(b) == 40);
-                std::cout << "  special_member_functions::test_CopyAssignmentOp...[OK]\n";
+                std::cout << "  special_member_functions::test_copyAssignmentOp...[OK]\n";
             }
 
-            void test_MoveCtor() {
-                std::cout << "  special_member_functions::test_MoveCtor...[START]\n";
+            void test_moveCtor() {
+                std::cout << "  special_member_functions::test_moveCtor...[START]\n";
                 using R = Record<Name, Age>;
                 R a{ Bind<Name>("Eve"), Bind<Age>(60) };
                 R b = std::move(a);
                 assert(get<Name>(b) == "Eve");
                 assert(get<Age>(b) == 60);
-                std::cout << "  special_member_functions::test_MoveCtor...[OK]\n";
+                std::cout << "  special_member_functions::test_moveCtor...[OK]\n";
             }
 
-            void test_MoveAssingmentOp() {
-                std::cout << "  special_member_functions::test_MoveAssingmentOp...[START]\n";
+            void test_moveAssingmentOp() {
+                std::cout << "  special_member_functions::test_moveAssingmentOp...[START]\n";
                 using R = Record<Name, Age>;
                 R a{ Bind<Name>("Frank"), Bind<Age>(70) };
                 R b{ Bind<Name>("Grace"), Bind<Age>(80) };
                 b = std::move(a);
                 assert(get<Name>(b) == "Frank");
                 assert(get<Age>(b) == 70);
-                std::cout << "  special_member_functions::test_MoveAssingmentOp...[OK]\n";
+                std::cout << "  special_member_functions::test_moveAssingmentOp...[OK]\n";
             }
         }
 
@@ -263,11 +272,11 @@ int main() {
 
     std::cout << "\n[special_member_functions]\n";
     record::tests::record::special_member_functions::test_defaultCtor();
-    record::tests::record::special_member_functions::test_BindCtor();
-    record::tests::record::special_member_functions::test_CopyCtor();
-    record::tests::record::special_member_functions::test_CopyAssignmentOp();
-    record::tests::record::special_member_functions::test_MoveCtor();
-    record::tests::record::special_member_functions::test_MoveAssingmentOp();
+    record::tests::record::special_member_functions::test_bindCtor();
+    record::tests::record::special_member_functions::test_copyCtor();
+    record::tests::record::special_member_functions::test_copyAssignmentOp();
+    record::tests::record::special_member_functions::test_moveCtor();
+    record::tests::record::special_member_functions::test_moveAssingmentOp();
 
     std::cout << "\n[helper_friends]\n";
     record::tests::record::helper_friends::test_get();

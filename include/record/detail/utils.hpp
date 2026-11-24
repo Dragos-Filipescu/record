@@ -183,7 +183,7 @@ namespace record::detail::utils {
                 detail::SameSize<decltype(Order), Ts...>
                 && detail::ValidIndices<Order, Ts...>
             )
-        struct Reorder final {
+        struct Reorder {
             // We use an index_sequence just to expand the array indices [0, 1, 2...]
             template<std::size_t... Is>
             static auto makeType(std::index_sequence<Is...>) {
@@ -195,6 +195,11 @@ namespace record::detail::utils {
 
             template<template<typename...> typename Target>
             using Rebind = type::template Rebind<Target>;
+        };
+
+        template<typename... Ts>
+        struct PermutationsOf {
+
         };
     }
 

@@ -135,6 +135,34 @@ namespace record {
             >::template Rebind<Target>;
         };
 
+        /**
+         * @brief Canonical form of this Record.
+         *
+         * That is, an alias for <c>Record<Fields...></c>, where Fields are
+         * reordered according to order they would have in internal storage,
+         * as per the rules of the internal layout reordering engine.
+         *
+         * This alias will produce identical types for Field-set equivalent Records.
+         *
+         * For example:
+         *
+         * @code{.cpp}
+         *
+         * struct Name : RecordField<std::string> {};
+         * struct Age : RecordField<int> {};
+         * struct Height : RecordField<double> {};
+         *
+         * using R1 = Record<Name, Age, Height>;
+         * using R2 = Record<Age, Name, Height>;
+         * using R3 = Record<Height, Age, Name>;
+         *
+         * static_assert(std::same_as<R1::Canonical, R2::Canonical>);
+         * static_assert(std::same_as<R1::Canonical, R3::Canonical>);
+         *
+         * @endcode
+         */
+        using Canonical = Rebind<Record>::AsStored;
+
         /// @brief Type-trait queries for the Fields of this Record.
         using Traits = field::detail::traits::FieldTraits<Fields...>;
 
@@ -1017,7 +1045,7 @@ namespace record {
             Record<Fields...>::HelperContracts
             ::template GetF<F>::kIsValid
         )
-    [[nodiscard]] auto& get(
+    auto& get(
         Record<Fields...>& record
     ) noexcept {
         return *std::launder(record.template getLoc<F>());
@@ -1125,7 +1153,7 @@ namespace record {
             Record<Fields...>::HelperContracts
             ::template GetI<I>::kIsValid
         )
-    [[nodiscard]] auto& get(
+    auto& get(
         Record<Fields...>& record
     ) noexcept {
         using F = std::tuple_element_t<I, std::tuple<Fields...>>;

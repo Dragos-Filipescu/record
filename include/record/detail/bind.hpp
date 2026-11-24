@@ -7,7 +7,6 @@
 
 #include <record/field.hpp>
 
-
 namespace record {
 
     /// @brief Controls argument storage in the intermediate Binding.
